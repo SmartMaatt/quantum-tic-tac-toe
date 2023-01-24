@@ -1,10 +1,12 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+from game import get_random_value, validate
 
 def main():
     menu = ["Play", "Instructions", "About"]
     option = st.sidebar.selectbox("Menu", menu)
+
     if option=="Play":
         st.write("This is Play")
 
@@ -48,19 +50,6 @@ def main():
         st.markdown("- Tomasz Sitek")
         st.markdown("- Michał Urbanek")
         st.balloons()
-
-
-
-# def main():
-#     menu = ["Play","Instructions", "About"]
-#     option = st.sidebar.selectbox("Menu", menu)
-
-#     if option == "Play":
-#         st.write("This is play!")
-#     elif option == "Instructions":
-#         st.write("This is instructions!")
-#     elif option == "About":
-#         st.write("This is about!")
 
 if __name__ == '__main__':
     main()
