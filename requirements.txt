@@ -1,0 +1,4 @@
+qiskit
+streamlit
+numpy
+pandas
