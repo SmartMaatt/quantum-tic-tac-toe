@@ -47,7 +47,6 @@ def perform_move(y, x):
         st.info("Already selected!")
         st.dataframe(st.session_state.board)
 
-
 def main():
     menu = ["Play", "Instructions", "About"]
     option = st.sidebar.selectbox("Menu", menu)
@@ -87,7 +86,7 @@ def main():
     elif option=="Instructions":
         st.subheader("Instructions")
         board = np.array([[psi,psi,psi], [psi,psi,psi], [psi,psi,psi]])
-        st.write('board:')
+        st.write('Board:')
         st.dataframe(board)
         instruction_1 = """
         The above board represents the initial state of the game.
@@ -98,20 +97,8 @@ def main():
         when computer/user make their move, it will result into their respective move.
         For eg, if user selects a piece, it's actually possible that the piece take the value of |0> and not |1>.
         This is the Quantum effect of Quantum Superposition in the Quantum Tic Tac Toe!
-        The squares in the 3x3 grid (board) are numbered in the following manner as shown below:
         """
-
         st.write(instruction_1)
-        board_numbering = pd.DataFrame([[1,2,3], [4,5,6], [7,8,9]])
-        st.dataframe(board_numbering)
-
-        instruction_2 = """
-        The user can select any space from the 3x3 grid using the selection menu as shown below and the,
-        press the submit button.
-
-        (Note: TO get back, select a value from the menu!)
-        """
-        st.write(instruction_2)
     
     else:
         st.subheader('About')

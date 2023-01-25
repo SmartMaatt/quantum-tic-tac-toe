@@ -85,8 +85,3 @@ def validate(arr):
         return 1
     else:
         return 0
-    
-
-
-res = quantum_superposition()
-print(res)
